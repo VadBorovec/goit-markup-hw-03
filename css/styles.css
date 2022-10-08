@@ -1,13 +1,13 @@
 :root {
-    /* колір акценту (бренд) #2196F3 */
+    /* колір акценту (бренд) */
     --accent-color: #2196F3;
-    /* основний колір тексту #757575 */
+    /* основний колір тексту */
     --primary-text-color: #757575;
-    /* другорядний колір тексту #212121 */
+    /* другорядний колір тексту */
     --title-text-color: #212121;
-    /* білий колір тексту #FFFFFF*/
+    /* білий колір тексту */
     --white-text-color: #FFFFFF;
-    /* чорний колір тексту #FFFFFF*/
+    /* чорний колір тексту */
     --black-text-color: #000000;
     /* основний колір фону */
     --primary-bcg-color: #ffffff;
@@ -15,7 +15,6 @@
     --secondary-bcg-color: #F5F4FA;
     /* темний колір фону */
     --dark-bcg-color: #2F303A;
-
 }
 
 /* Тіло */
@@ -24,22 +23,26 @@ body {
     background-color: var(--primary-bcg-color);
     color: var(--primary-text-color);
     font-family: "roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
     letter-spacing: 0.03em;
+}
+
+/* Списки */
+
+.list {
+    list-style: none;
 }
 
 /* Лого */
 
 .logo {
-    color: var(--black-text-color);
+    color: var(--accent-color);
     text-decoration: none;
     font-family: "raleway", sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-}
-
-.logo.accent {
-    color: var(--accent-color);
 }
 
 .logo.primary {
@@ -50,15 +53,9 @@ body {
     color: var(--white-text-color);
 }
 
-/* Списки */
+/* Лінки */
 
-.list {
-    list-style: none;
-}
-
-/* Навігація */
-
-.site-nav .link {
+.link {
     color: var(--title-text-color);
     text-decoration: none;
     font-weight: 500;
@@ -67,38 +64,91 @@ body {
     letter-spacing: 0.02em;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus,
-.site-nav .link.current,
-.info .contacts:hover,
-.info .contacts:focus {
-    color: var(--accent-color) ;
+.link:hover,
+.link:focus,
+.link.current,
+.contacts:hover,
+.contacts:focus {
+    color: var(--accent-color);
 }
 
-/* Контакти */
-
-.info .contacts {
+.contacts {
     color: inherit;
-    text-decoration: none;
+}
+
+.map {
+    color: var(--white-text-color);
+    }
+
+/* Кнопки */
+
+.button {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: inherit;
+    line-height: 1.88;
+    border-color: transparent;
+    cursor: pointer;
+    letter-spacing: inherit;
+    border-radius: 4px;
+}
+
+/* Кнопка з Героя */
+
+.button.primary {
+    color: var(--white-text-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.06em;
+}
+
+.button.primary:hover,
+.button.primary:focus {
+    background-color: #188CE8;
+    outline: none;
+}
+
+/* Кнопка з фільтрів */ 
+
+.button.secondary {
+    color: var(--title-text-color);
+    background-color: var(--secondary-bcg-color);
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    line-height: 1.63;
 }
 
-.info .map {
-    color: #FFFFFF;
-    text-decoration: none;
+.button.secondary:hover,
+.button.secondary:focus {
+    color: var(--white-text-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+        outline: none;
 }
 
-/* Підвал */
+/* Приховані елементи */
 
-.page-footer {
-    background-color: var(--dark-bcg-color);
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
-.address {
-    font-style: normal;
+/* Контейнер */
+
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 10x 10px;
 }
 
 /* Герой */
@@ -114,83 +164,27 @@ body {
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
+    text-align: center;
 }
 
-/* Кнопки */
-
-.button {
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    border-color: transparent;
-    cursor: pointer;
-    letter-spacing: 0.03em;
-}
-/* Кнопка з Героя */
-
-.button.primary {
-    color: var(--white-text-color);
-    background-color: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);  
-    letter-spacing: 0.06em;
-}
-
-.button.primary:hover,
-.button.primary:focus {
-    background-color: #188CE8;
-}
-
-/* Кнопка з фільтрів */
-
-.button.secondary {
-    color: var(--title-text-color);
-    background-color: var(--secondary-bcg-color);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.63;
-}
-
-.button.secondary:hover,
-.button.secondary:focus {
-    color: var(--white-text-color);
-    background-color: var(--accent-color);
-}
-
-/* Заголовки та параграфи спільне*/
+/* Секції */
 
 .section-title {
     color: var(--title-text-color);
-    font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
 }
 
 .title {
     color: var(--title-text-color);
-    font-weight: 700;
+    font-size: inherit;
+    line-height: 1.19;
 }
 
 .text {
     color: var(--primary-text-color);
-    font-size: 14px;
-    line-height: 1.72;
+    line-height: 1.71;
 }
-
-/* Приховані елементи */
-
- .visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
- }
 
 /* Секція Переваги */
 
@@ -215,20 +209,13 @@ body {
 
 .team .title {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
 }
 
 .team .text {
-    font-size: 16px;
     line-height: 1.19;
 }
 
 /* Секція портфоліо */
-
-.examples .link {
-    text-decoration: none;
-}
 
 .examples .title {
     font-size: 18px;
@@ -239,4 +226,14 @@ body {
 .examples .text {
     font-size: 16px;
     line-height: 1.88;
+}
+
+/* Підвал */
+
+.page-footer {
+    background-color: var(--dark-bcg-color);
+}
+
+.address {
+    font-style: normal;
 }
