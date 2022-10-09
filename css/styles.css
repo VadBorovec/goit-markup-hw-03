@@ -91,6 +91,9 @@ body {
     cursor: pointer;
     letter-spacing: inherit;
     border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 32px;
 }
 
 /* Кнопка з Героя */
@@ -115,6 +118,7 @@ body {
     background-color: var(--secondary-bcg-color);
     font-weight: 500;
     line-height: 1.63;
+    padding: 6px 22px;
 }
 
 .button.secondary:hover,
@@ -125,6 +129,14 @@ body {
         0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
         outline: none;
+}
+
+/* Зображення */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Приховані елементи */
@@ -146,15 +158,50 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1600px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 10x 10px;
+    padding: 0 15px;
+}
+
+/* Шапка */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0 25px;
+    border-bottom: 1px solid #ececec;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; 
+    gap: 93px;   
+}
+
+.site-nav.list {
+    gap: 50px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 50px;
 }
 
 /* Герой */
 
 .hero {
     background-color: var(--dark-bcg-color);
+    padding: 200px 0;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .hero-title {
@@ -165,38 +212,76 @@ body {
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-align: center;
+    max-width: 696px;
+    margin: 0 auto 40px;
 }
 
 /* Секції */
+
+.section {
+    padding: 94px 0;
+}
 
 .section-title {
     color: var(--title-text-color);
     font-size: 36px;
     line-height: 1.17;
+    margin: 0 0 50px;
 }
 
 .title {
     color: var(--title-text-color);
     font-size: inherit;
     line-height: 1.19;
+    margin: 0 auto 10px;
 }
 
 .text {
     color: var(--primary-text-color);
     line-height: 1.71;
+    margin: 0;
 }
 
 /* Секція Переваги */
+
+.section.features {
+    padding-bottom: 0;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features.list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+}
 
 .features .title {
     text-transform: uppercase;
     font-size: 14px;
     line-height: 1.14;
+    padding: 0;
+    margin: 0;
 }
 
 /* Секція Рішення */
 
+.solutions-container {
+    display: block;
+    justify-content: center;
+}
 
+.solutions.list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+
+}
 /* Секція Команда */
 
 .team {
@@ -221,6 +306,7 @@ body {
     font-size: 18px;
     letter-spacing: 0.06em;
     line-height: 2;
+    margin: 0 auto 4px;
 }
 
 .examples .text {
