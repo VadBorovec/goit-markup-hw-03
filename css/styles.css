@@ -23,7 +23,7 @@ body {
     background-color: var(--primary-bcg-color);
     color: var(--primary-text-color);
     font-family: "roboto", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.03em;
 }
@@ -105,12 +105,12 @@ img {
 .button {
     font-family: inherit;
     font-weight: 700;
-    font-size: inherit;
+    font-size: 16px;
     line-height: 1.88;
-    border-color: transparent;
     cursor: pointer;
     letter-spacing: inherit;
     border-radius: 4px;
+    border: 0;
     margin: 0 auto;
     padding: 10px 32px;
 }
@@ -281,13 +281,8 @@ img {
 
 .features .title {
     text-transform: uppercase;
-    font-size: 14px;
     line-height: 1.14;
 
-}
-
-.features .text {
-    font-size: 14px;
 }
 
 /* Секція Рішення */
@@ -330,9 +325,11 @@ img {
 
 .team .title {
     font-weight: 500;
+    font-size: 16px;
 }
 
 .team .text {
+    font-size: 16px;
     line-height: 1.19;
 }
 
@@ -355,11 +352,10 @@ img {
 
 .examples .item {
     width: 370px;
-    text-align: center;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
     border: 1px solid #EEEEEE;
     border-top: 0;
+    /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px; */
 }
 
 .examplex-description {
@@ -374,6 +370,8 @@ img {
 }
 
 .examples .text {
+    font-weight: 400;
+    font-size: 16px;
     line-height: 1.88;
 }
 
@@ -384,8 +382,10 @@ img {
     padding: 60px 0;
 }
 
-.address {
-    font-style: normal;  
+.address .link {
+    font-style: normal; 
+    font-weight: 400;
+    letter-spacing: inherit;
 }
 
 .footer-container .logo {
